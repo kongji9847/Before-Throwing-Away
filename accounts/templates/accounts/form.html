@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if request.resolver_match.url_name == "signup" %}
+<h1>회원가입</h1>
+{% endif %}
+<hr>
+<form action="" method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button class="btn btn-info">Submit</button>
+</form>
+
+{% endblock content %}
+
